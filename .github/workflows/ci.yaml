@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: ['*']
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+      - run: |
+          npm install
+          npm run lint
+
+  build-publish:
+    needs: [lint]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+      - run: |
+          npm install
+          npm run build
+      - name: Deploy to TransIP
+        run: |
+          mkdir -p ~/.ssh/
+          ssh-keyscan -p 22 ${{ secrets.SCP_HOST }} >> ~/.ssh/known_hosts
+          sshpass -p "${{ secrets.SCP_PASSWORD }}" scp -r dist/** ${{ secrets.SCP_USER }}@${{ secrets.SCP_HOST }}:~/www/

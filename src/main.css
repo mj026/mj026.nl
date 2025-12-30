@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@font-face {
+  font-display: block;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@theme {
+  --font-sans: "Work Sans", sans-serif;
+  --color-mj-blue: #356baf;
+  --color-mj-blue-secondary: #517db8;
+  --color-mj-blue-light: #f6f7fb;
+  --color-mj-orange: #ff634d; /* #f75c36; */
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  a {
+    @apply text-mj-blue underline;
+  }
+
+  a:hover {
+    @apply text-mj-orange underline;
+  }
+
+  .block {
+    @apply bg-mj-blue-light;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10;
+  }
+
+  .projects {
+    ul {
+      @apply ms-5 relative before:absolute before:top-0 before:bottom-0 before:-left-4 before:block before:w-1 before:rounded-full before:bg-mj-blue/10 before:content-[''];
+      li {
+        @apply relative before:absolute before:top-[2.20rem] before:-left-[1.3rem] before:block before:size-4 before:rounded-full before:border-1 before:border-2 before:border-mj-blue/75 before:bg-white before:content-[''] ps-2 pb-3;
+        h4 {
+          @apply text-mj-blue;
+        }
+      }
+    }
+  }
+
+  :root[data-theme="light"] {
+    .btn-dark-mode {
+      @apply text-white;
+      svg.light {
+        display: none;
+      }
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-mj-blue: var(--color-blue-300);
+
+    .block {
+      @apply bg-zinc-800;
+    }
+
+    .badge {
+      @apply bg-zinc-700 text-zinc-200;
+    }
+
+    .projects {
+      ul {
+        @apply before:bg-zinc-500/10;
+      }
+    }
+
+    .btn-dark-mode {
+      svg.dark {
+        display: none;
+      }
+    }
+  }
+}

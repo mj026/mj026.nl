@@ -1,0 +1,377 @@
+{
+  "$schema": "index.schema.json",
+  "projects": [
+    {
+      "year": "2025",
+      "title": "Beep for Help",
+      "description": "Customer Support Portal",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://docs.pydantic.dev/latest/",
+          "title": "Pydantic"
+        },
+        {
+          "url": "https://tailwindcss.com/",
+          "title": "Tailwindcss"
+        },
+        {
+          "url": "https://github.com/kevin1024/vcrpy",
+          "title": "VCR.py"
+        },
+        {
+          "url": "https://www.openapis.org/",
+          "title": "OpenAPI"
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "title": "Track32",
+      "description": "Machine Learning Portal",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://github.com/pallets/flask",
+          "title": "Flask"
+        },
+        {
+          "url": "https://www.min.io/",
+          "title": "MinIO"
+        },
+        {
+          "url": "https://github.com/mj026/crumbles/",
+          "title": "Crumbles"
+        },
+        {
+          "url": "https://www.openapis.org/",
+          "title": "OpenAPI"
+        },
+        {
+          "url": "https://docs.gitlab.com/ci/",
+          "title": "Gitlab CI"
+        },
+        {
+          "url": "https://www.postgresql.org/",
+          "title": "PostgreSQL"
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "title": "Techonomy",
+      "description": "TDD and CI mentor",
+      "tags": [
+        {
+          "url": "https://medium.com/@mj026/a-private-pypi-server-with-aws-codeartifact-618d29ab5574",
+          "title": "AWS Codeartifact"
+        },
+        {
+          "url": "https://www.docker.com",
+          "title": "Docker"
+        },
+        {
+          "url": "https://developer.hashicorp.com/terraform",
+          "title": "Terraform"
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "title": "Team Sportservice",
+      "description": "Back Office Scheduling Application",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://www.postgresql.org/",
+          "title": "PostgreSQL"
+        },
+        {
+          "url": "https://github.com/django-crispy-forms/django-crispy-forms",
+          "title": "Crispy Forms"
+        },
+        {
+          "url": "https://mdbootstrap.com/",
+          "title": "MDBootstrap"
+        }
+      ]
+    },
+    {
+      "year": "2021",
+      "title": "Vicktor",
+      "description": "Several Wagtail and Django projects",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://wagtail.org/",
+          "title": "Wagtail"
+        },
+        {
+          "url": "https://www.postgresql.org/",
+          "title": "PostgreSQL"
+        },
+        {
+          "url": "https://github.com/django-crispy-forms/django-crispy-forms",
+          "title": "Crispy Forms"
+        },
+        {
+          "url": "https://mdbootstrap.com/",
+          "title": "MDBootstrap"
+        }
+      ]
+    },
+    {
+      "year": "2020",
+      "title": "Gelders",
+      "description": "B2B E-commerce",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://www.django-rest-framework.org/",
+          "title": "Django Rest Framework"
+        },
+        {
+          "url": "https://github.com/django-oscar/django-oscar",
+          "title": "Django Oscar"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/sql-server",
+          "title": "MS SQL Server"
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "title": "Zumtobel",
+      "description": "Corporate website",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://wagtail.org/",
+          "title": "Wagtail"
+        },
+        {
+          "url": "https://www.postgresql.org/",
+          "title": "PostgreSQL"
+        },
+        {
+          "url": "https://angularjs.org/",
+          "title": "AngularJS"
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "title": "Lukkien",
+      "description": "Several Django projects",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://developer.hashicorp.com/terraform",
+          "title": "Terraform"
+        }
+      ]
+    },
+    {
+      "year": "2018",
+      "title": "Rijkzwaan",
+      "description": "Cluster API",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://www.django-rest-framework.org/",
+          "title": "Django Rest Framework"
+        },
+        {
+          "url": "https://www.rabbitmq.com/",
+          "title": "RabbitMQ"
+        },
+        {
+          "url": "https://github.com/Bogdanp/dramatiq",
+          "title": "Dramatiq"
+        },
+        {
+          "url": "https://github.com/snok/django-auth-adfs",
+          "title": "Microsoft ADFS"
+        },
+        {
+          "url": "https://azure.microsoft.com/en-us",
+          "title": "Microsoft Azure"
+        }
+      ]
+    },
+    {
+      "year": "2018",
+      "title": "Liander",
+      "description": "Microservices API",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://www.django-rest-framework.org/",
+          "title": "Django Rest Framework"
+        },
+        {
+          "url": "https://www.postgresql.org/",
+          "title": "PostgreSQL"
+        },
+        {
+          "url": "https://github.com/maykinmedia/python-ideal",
+          "title": "Python IDeal"
+        }
+      ]
+    },
+    {
+      "year": "2014-2017",
+      "title": "Vadain",
+      "description": "Soap Webservice",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/sql-server",
+          "title": "MS SQL Server"
+        },
+        {
+          "url": "https://github.com/suds-community/suds",
+          "title": "Suds"
+        }
+      ]
+    },
+    {
+      "year": "2014-2017",
+      "title": "Lukkien",
+      "description": "Nutricia E-commerce platform",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://github.com/django-oscar/django-oscar",
+          "title": "Django Oscar"
+        },
+        {
+          "url": "https://github.com/django-oscar/django-oscar-api",
+          "title": "Django Oscar API"
+        },
+        {
+          "url": "https://developer.hashicorp.com/terraform",
+          "title": "Terraform"
+        },
+        {
+          "url": "https://github.com/saltstack/salt",
+          "title": "Saltstack"
+        }
+      ]
+    },
+    {
+      "year": "2015",
+      "title": "Efteling",
+      "description": "E-Commerce Platform",
+      "tags": [
+        {
+          "url": "https://www.djangoproject.com/",
+          "title": "Django"
+        },
+        {
+          "url": "https://github.com/django-oscar/django-oscar",
+          "title": "Django Oscar"
+        },
+        {
+          "url": "https://github.com/django-oscar/django-oscar-api",
+          "title": "Django Oscar API"
+        }
+      ]
+    },
+    {
+      "year": "2012-2014",
+      "title": "Avira",
+      "description": "Safesearch - High Performance Web Server",
+      "tags": [
+        {
+          "url": "https://www.tornadoweb.org/en/stable/",
+          "title": "Tornado"
+        },
+        {
+          "url": "https://www.puppet.com/",
+          "title": "Puppet"
+        },
+        {
+          "url": "https://docs.ansible.com/",
+          "title": "Ansible"
+        }
+      ]
+    },
+    {
+      "year": "2005-2011",
+      "title": "Four Digits",
+      "description": "Founder and Plone Developer",
+      "tags": [
+        {
+          "url": "https://github.com/zopefoundation/Zope",
+          "title": "Zope"
+        },
+        {
+          "url": "https://plone.org/",
+          "title": "Plone"
+        },
+        {
+          "url": "https://www.debian.org/",
+          "title": "Debian"
+        },
+        {
+          "url": "https://xenproject.org/",
+          "title": "Xen"
+        }
+      ]
+    },
+    {
+      "year": "2002-2005",
+      "title": "East Site",
+      "description": "Python Developer",
+      "tags": [
+        {
+          "url": "https://github.com/zopefoundation/Zope",
+          "title": "Zope"
+        },
+        {
+          "url": "https://www.perl.org/",
+          "title": "Perl"
+        },
+        {
+          "url": "https://www.debian.org/",
+          "title": "Debian"
+        }
+      ]
+    }
+  ]
+}
