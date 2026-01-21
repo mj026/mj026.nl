@@ -12,11 +12,14 @@ export default {
     rollupOptions: {
       input: ["src/index.njk.html"],
     },
+    modulePreload: {
+      polyfill: false,
+    },
   },
   // Added this so vite-plugin-nunjucks won't complain about the missing index.njk.html file,
   // as the .html extension is needed for rollup, but will be omitted when actually building the
   // html
   optimizeDeps: {
-      entries: [],
-  }  
+    entries: [],
+  },
 } satisfies UserConfig;
