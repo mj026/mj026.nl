@@ -1,0 +1,1 @@
+[this website](https://github.com/mj026/mj026.nl) is built with [tailwindcss](https://tailwindcss.com/), [vite](https://vite.dev/), [eta](https://eta.js.org/), [showdown](https://github.com/showdownjs/showdown), [biome](https://biomejs.dev/), and [sublime text](https://www.sublimetext.com/)

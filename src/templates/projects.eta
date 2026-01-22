@@ -1,0 +1,39 @@
+<div class="projects block">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl">projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 pt-8">
+      <ul>
+        <% data.projects.slice(0,8).forEach(function(project){ %>
+        <li>
+          <h4 class="text-md font-semibold"><%= project.year %></h4>
+          <h5 class="font-semibold"><%= project.title %> </h5>
+          <p class="text-sm"><%= project.description %></p>
+          <p class="text-md text-gray-700">
+            <% project.tags.forEach(function(tag){ %>
+            <span class="badge">
+              <a href="<%= tag.url %>"><%= tag.title %></a>
+            </span>
+            <% }) %>
+          </p>
+        </li>
+        <% }) %>
+      </ul>
+      <ul>
+        <% data.projects.slice(8).forEach(function(project){ %>
+        <li>
+          <h4 class="text-md font-semibold"><%= project.year %></h4>
+          <h5 class="font-semibold"><%= project.title %> </h5>
+          <p class="text-sm"><%= project.description %></p>
+          <p class="text-md text-gray-700">
+            <% project.tags.forEach(function(tag){ %>
+            <span class="badge">
+              <a href="<%= tag.url %>"><%= tag.title %></a>
+            </span>
+            <% }) %>
+          </p>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>
