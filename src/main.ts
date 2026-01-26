@@ -1,4 +1,4 @@
-const dateSpan: HTMLElement | null = document.querySelector("#date");
+const dateSpan = document.querySelector<HTMLElement>("#date");
 
 if (dateSpan !== null) {
   dateSpan.innerText = new Date().getFullYear().toString();
@@ -13,15 +13,15 @@ if (window.matchMedia?.("(prefers-color-scheme: dark)").matches) {
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", (event) => {
+    // Change to dark / light when the OS UI changes to dark / ligh
     document.documentElement.dataset.theme = event.matches ? "dark" : "light";
   });
 
-const toggleThemeButton: HTMLElement | null = document.querySelector(".btn-dark-mode");
+const toggleThemeButton = document.querySelector<HTMLElement>(".btn-dark-mode");
 
 if (toggleThemeButton !== null) {
   toggleThemeButton.onclick = () => {
     const currentTheme = document.documentElement.dataset.theme;
     document.documentElement.dataset.theme = currentTheme === "dark" ? "light" : "dark";
-    console.log(currentTheme);
   };
 }
