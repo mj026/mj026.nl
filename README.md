@@ -1,8 +1,8 @@
 # mj026.nl
 ![](https://github.com/mj026/mj026.nl/actions/workflows/ci.yaml/badge.svg)
 
-My professional website built with [tailwindcss](https://tailwindcss.com/), 
-              [vite](https://vite.dev/), [nunjucks](https://mozilla.github.io/nunjucks/), [biome](https://biomejs.dev/) and [sublime text](https://www.sublimetext.com/).deployed on [https://www.mj026.nl](https://www.mj026.nl)
+Built with [tailwindcss](https://tailwindcss.com/), [vite](https://vite.dev/), [eta](https://eta.js.org/), [showdown](https://github.com/showdownjs/showdown), [biome](https://biomejs.dev/), and [sublime text](https://www.sublimetext.com/)
+
 
 ## Development requirements
 
