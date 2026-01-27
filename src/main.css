@@ -21,7 +21,7 @@
   --color-mj-blue: #356baf;
   --color-mj-blue-secondary: #517db8;
   --color-mj-blue-light: #f6f7fb;
-  --color-mj-orange: #ff634d; /* #f75c36; */
+  --color-mj-orange: #ff5141; /* #f75c36; or ff634d FF5141*/
 }
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
@@ -41,6 +41,10 @@
 
   .badge {
     @apply inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10;
+  }
+
+  .about p {
+    @apply mt-5;
   }
 
   .projects {
