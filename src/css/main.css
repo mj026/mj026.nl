@@ -5,7 +5,7 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 500;
-  src: url("./fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-family: "Work Sans";
   font-style: italic;
   font-weight: 400;
-  src: url("./fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
 @theme {
