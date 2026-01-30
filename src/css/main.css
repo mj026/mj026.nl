@@ -37,6 +37,9 @@
 
   .block {
     @apply rounded-xl bg-mj-blue-light p-8 md:p-16;
+    h2 {
+      @apply text-4xl;
+    }
   }
 
   .badge {

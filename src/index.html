@@ -86,7 +86,8 @@
           <h1 class="text-[2.5rem] md:text-5xl font-medium whitespace-nowrap">
             martijn jacobs
           </h1>
-          <h2 class="md:mt-3 text-[1.38rem] md:text-[1.65rem] font-medium whitespace-nowrap">
+          <h2
+            class="md:mt-3 text-[1.38rem] md:text-[1.65rem] font-medium whitespace-nowrap">
             web developer since 2001
           </h2>
           <div class="mt-10 ps-1">
@@ -167,7 +168,7 @@
       <div class="pt-8">
         <div class="block">
           <div class="max-w-3xl mx-auto text-justify">
-            <h2 class="text-4xl">about</h2>
+            <template data-template-engine="showdown">## about</template>
             <div class="about mt-5">
               <template
                 data-template-engine="showdown"
@@ -179,10 +180,15 @@
       <!-- END About -->
       <!-- PROJECTS -->
       <div class="pt-8">
-        <template
-          data-template-engine="eta"
-          data-template-path="templates/projects.eta"
-          data-template-json="templates/projects.json"></template>
+        <div class="projects block">
+          <div class="max-w-3xl mx-auto">
+            <template data-template-engine="showdown">## projects</template>
+            <template
+              data-template-engine="eta"
+              data-template-path="templates/projects.eta"
+              data-template-json="templates/projects.json"></template>
+          </div>
+        </div>
       </div>
       <!-- END Projects -->
     </main>
@@ -211,9 +217,7 @@
         <div
           class="flex flex-col md:flex-row flex-wrap justify-between rounded-xl px-8 pt-6 gap-y-4">
           <div class="flex flex-col">
-            <div>
-              <span class="font-semibold">company</span>
-            </div>
+            <div><span class="font-semibold">company</span></div>
             <div>
               <span class="font-semibold">kvk</span>
               <span>53073231</span>
