@@ -1,14 +1,7 @@
 import { Eta } from "eta";
 import type { Plugin, ResolvedConfig } from "vite";
 import renderShowdown from "./showdown.ts";
-import { readFile, readJSON } from "./utils.ts";
-
-// Match templates like
-// <template
-//   data-template-engine="showdown"
-//   data-template-path="templates/about.md"></template>
-const regex =
-  /(?<template><template(?:\n|\s)+data-template-engine="(?<engine>[^"]+)"(?:(?:\n|\s)+data-template-path="(?<path>[^"]+)")*(?:(?:\n|\s)+data-template-json="(?<json>[^"]+)")*>(?<content>[^<]*)<\/template>)/gs;
+import { readFile, readJSON, templateHTMLMatcher } from "./utils.ts";
 
 type TemplateConfig = {
   template: string;
@@ -53,14 +46,6 @@ const templateEngines: Record<string, TemplateRendererConstructor> = {
   showdown: ShowdownRenderer,
 };
 
-type TemplateMatchObject = {
-  template: string;
-  engine: string;
-  path: string | undefined;
-  json: string | undefined;
-  content: string;
-};
-
 export default function vitePluginTemplate(): Plugin {
   let config: ResolvedConfig;
 
@@ -74,9 +59,8 @@ export default function vitePluginTemplate(): Plugin {
     transformIndexHtml: {
       order: "pre",
       handler(html: string) {
-        for (const match of html.matchAll(regex)) {
-          const { template, engine, path, json, content } =
-            match.groups as TemplateMatchObject;
+        for (const match of templateHTMLMatcher(html)) {
+          const { template, engine, path, json, content } = match;
 
           if (engine in templateEngines) {
             const renderer = new templateEngines[engine]({
