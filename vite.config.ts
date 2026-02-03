@@ -1,9 +1,14 @@
 import tailwindcss from "@tailwindcss/vite";
 import type { UserConfig } from "vite";
-import template from "./src/ts/vite-plugin-template";
+import partial from "./src/ts/plugin";
+
+import { ShowdownRenderer, EtaRenderer } from "./src/ts/plugin/renderers";
 
 export default {
-  plugins: [template(), tailwindcss()],
+  plugins: [
+    partial({ eta: EtaRenderer, showdown: ShowdownRenderer }),
+    tailwindcss(),
+  ],
   root: "src",
   build: {
     target: "es2015",

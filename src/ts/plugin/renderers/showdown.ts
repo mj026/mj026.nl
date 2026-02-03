@@ -1,5 +1,7 @@
 import showdown from "showdown";
 
+import { AbstractPartialRenderer } from "../types.ts";
+
 const converter = new showdown.Converter({
   extensions: [],
 });
@@ -9,4 +11,8 @@ converter.setOption("tables", true);
 converter.setFlavor("github");
 converter.setOption("openLinksInNewWindow", true);
 
-export default (content: string) => converter.makeHtml(content.trim());
+export class ShowdownRenderer extends AbstractPartialRenderer {
+  render() {
+    return converter.makeHtml(this.config.template.trim());
+  }
+}
