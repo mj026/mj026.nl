@@ -12,7 +12,9 @@ converter.setFlavor("github");
 converter.setOption("openLinksInNewWindow", true);
 
 export class ShowdownRenderer extends AbstractPartialRenderer {
-  render() {
-    return converter.makeHtml(this.config.template.trim());
+  async render() {
+    return new Promise<string>((resolve) =>
+      resolve(converter.makeHtml(this.config.template.trim())),
+    );
   }
 }

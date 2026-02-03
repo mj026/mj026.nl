@@ -6,7 +6,7 @@ export type TPartialConfig = {
 export interface IPartialRenderer {
   config: TPartialConfig;
 
-  render(): string;
+  render(): Promise<string>;
 }
 
 export abstract class AbstractPartialRenderer implements IPartialRenderer {
@@ -16,7 +16,7 @@ export abstract class AbstractPartialRenderer implements IPartialRenderer {
     this.config = config;
   }
 
-  abstract render(): string;
+  abstract render(): Promise<string>;
 }
 
 // We need a abstract construct signature here as abstract classes can't be initiated.

@@ -1,4 +1,4 @@
-import type { Plugin, ResolvedConfig } from "vite";
+import type { IndexHtmlTransformResult, Plugin, ResolvedConfig } from "vite";
 
 import type { TRenderEngines } from "./types.ts";
 import { readFile, templateHTMLMatcher } from "./utils.ts";
@@ -16,18 +16,20 @@ export default function vitePluginPartial(renderEngines: TRenderEngines = {}): P
 
     transformIndexHtml: {
       order: "pre",
-      handler(html: string) {
+      async handler(html: string): Promise<IndexHtmlTransformResult> {
         for (const match of templateHTMLMatcher(html)) {
           const { template, engine, path, json, content } = match;
 
           if (engine in engines) {
             const renderer = new renderEngines[engine]({
-              template: readFile(config.root, path, content),
-              context: readFile(config.root, json, {}),
+              template: await readFile(config.root, path, content),
+              context: await readFile(config.root, json, {}),
             });
-            html = html.replace(template, renderer.render());
+            const replacableHtml = await renderer.render();
+            html = html.replace(template, replacableHtml);
           }
         }
+
         return html;
       },
     },

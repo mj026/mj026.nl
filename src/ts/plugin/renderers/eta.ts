@@ -2,8 +2,10 @@ import { Eta } from "eta";
 import { AbstractPartialRenderer } from "../types.ts";
 
 export class EtaRenderer extends AbstractPartialRenderer {
-  render() {
+  async render() {
     const eta = new Eta({ varName: "data" });
-    return eta.renderString(this.config.template, this.config.context);
+    return new Promise<string>((resolve) =>
+      resolve(eta.renderString(this.config.template, this.config.context)),
+    );
   }
 }

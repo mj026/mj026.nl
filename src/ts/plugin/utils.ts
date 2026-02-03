@@ -1,19 +1,23 @@
-import fs from "node:fs";
+import { promises } from "node:fs";
 import { resolve } from "node:path";
 
-export function readFile<T extends string | object>(
+export async function readFile<T extends string | object>(
   root: string,
   path: string | undefined,
   defaultValue: T,
-): T {
+): Promise<T> {
   if (path === undefined) {
     return defaultValue;
   }
+
   switch (typeof defaultValue) {
-    case "string":
-      return fs.readFileSync(resolve(root, path), "utf8") as T;
-    case "object":
-      return JSON.parse(fs.readFileSync(resolve(root, path)).toString());
+    case "string": {
+      return promises.readFile(resolve(root, path), "utf8") as T;
+    }
+    case "object": {
+      const response = await promises.readFile(resolve(root, path), "utf8");
+      return JSON.parse(response);
+    }
   }
 }
 
