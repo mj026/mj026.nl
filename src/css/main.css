@@ -93,7 +93,7 @@
   }
 
   .blog {
-    @apply rounded-xl bg-mj-blue-light p-8 md:p-16;
+    @apply rounded-xl bg-mj-blue-light p-4 md:p-8 md:p-16;
     @variant dark {
       @apply bg-zinc-800;
     }
@@ -148,6 +148,9 @@
     code {
       @apply bg-zinc-500/5 text-red-400 p-1;
       border-radius: 0.5em;
+      min-width: 100%;
+      width: 0px;
+      overflow: auto; /* Or scroll */      
     }
 
     blockquote {
