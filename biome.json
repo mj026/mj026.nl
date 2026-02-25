@@ -3,8 +3,9 @@
   "formatter": {
     "indentStyle": "space",
     "lineWidth": 88
-  },  
+  },
   "html": {
+    "experimentalFullSupportEnabled": true,
     "parser": {
       "interpolation": true
     },
@@ -16,6 +17,11 @@
   "css": {
     "parser": {
       "tailwindDirectives": true
+    }
+  },
+  "json": {
+    "parser": {
+      "allowComments": true
     }
   }
 }
