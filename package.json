@@ -14,7 +14,9 @@
     "visualize": "vite-bundle-visualizer -c vite.config.js"
   },
   "dependencies": {
+    "glob": "^13.0.6",
     "jiti": "^2.6.1",
+    "liquidjs": "^10.24.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
@@ -23,6 +25,7 @@
     "@types/node": "^25.0.10",
     "@types/showdown": "^2.0.6",
     "eta": "^4.5.0",
+    "highlight.js": "^11.11.1",
     "showdown": "^2.1.0",
     "vite": "^7.3.1",
     "vite-bundle-visualizer": "^1.2.1",
