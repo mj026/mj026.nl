@@ -6,6 +6,6 @@ I'm a proponent of open-source software and the values associated with it. Furth
 
 TDD, CI/CD and DevOps are things I like to implement and automate with tools such as [Pytest](https://docs.pytest.org/en/stable/), [Playwright](https://playwright.dev/), [Docker](https://www.docker.com/), [GitLab CI/CD](https://docs.gitlab.com/ci/) and [GitHub Actions](https://github.com/features/actions). I sometimes orchestrate complete stacks with [Terraform](https://developer.hashicorp.com/terraform) and/or [Ansible](https://docs.ansible.com/).
 
-I'm also familiar with front-end development, including HTML, JavaScript (TS), (S)CSS or frameworks like [tailwindcss](https://tailwindcss.com/) and [Vue.js](https://vuejs.org/).
+I'm also familiar with front-end development, including HTML, JavaScript (TS), (S)CSS or frameworks like [TailwindCSS](https://tailwindcss.com/) and [Vue.js](https://vuejs.org/).
 
 Unix-based systems like Linux and macOS are my preferred OS's, and my current favourite container OS is [Alpine Linux](https://alpinelinux.org/)</a>. [Sublime Text](https://www.sublimetext.com/) is still my favourite editor.
