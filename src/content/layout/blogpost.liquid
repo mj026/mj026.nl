@@ -1,0 +1,19 @@
+{% layout "src/content/layout/default.liquid" %}
+
+{% block content %}
+  <div class="blog">
+    <div class="max-w-3xl mx-auto">
+      {% block blogpost %} {% endblock %}
+      <div class="pt-8">
+        <div class="flex flex-row items-center">
+          <figure class="min-w-8 w-8"><img class="p-0" src="/images/cube.svg" alt="Cube" ></figure>
+          <div class="flex flex-col ps-2">
+            <a class="text-[1rem]" href="/#blog">Back to blog overview</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block colophon %}{% endblock %}

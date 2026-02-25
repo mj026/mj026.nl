@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>mj026 - martijn jacobs</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="title" property="og:title" content="MJ026 - Martijn Jacobs" >
+    <meta
+      name="description"
+      property="og:description"
+      content="Hi, I'm Martijn Jacobs, a python web developer based in Arnhem, NL" >
+    <meta name="image" property="og:image" content="/images/logo.png" >
+    <script type="module" src="/ts/main.ts"></script>
+    <link rel="icon" type="image/svg" href="/favicon.svg" >
+    <link rel="stylesheet" href="/css/main.css" >
+  </head>
+
+  <body
+    class="antialiased flex flex-col h-screen text-lg text-gray-600 dark:text-zinc-200 dark:bg-zinc-900">
+    <!-- Header -->
+    <header
+      class="relative sticky top-0 z-20 backdrop-blur drop-shadow-lg px-4 bg-mj-blue/90 dark:bg-zinc-900">
+      <div class="mx-auto max-w-5xl px-4 h-16 flex items-center justify-between">
+        <a href="/">
+          <figure class="w-32"><img src="/images/logo.svg" alt="Logo" ></figure>
+        </a>
+        <div class="flex items-center gap-1">
+          <!-- Dark mode -->
+          <button
+            type="button"
+            class="btn-dark-mode flex shrink-0 justify-center items-center gap-x-1 text-xs hover:text-mj-orange ">
+            <svg
+              class="shrink-0 size-6 dark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-label="mj"
+              role="img">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <svg
+              class="shrink-0 size-6 light"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-label="026"
+              role="img">
+              >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+          <!-- END Dark mode -->
+        </div>
+      </div>
+    </header>
+    <!-- END Header -->
+
+    <!-- Main Content -->
+    <main class="mx-auto flex  max-w-lg md:max-w-5xl md:min-w-5xl flex-auto flex-col px-4 py-8">
+    	{% block content %}{% endblock %}
+      {% block after-content %}{% endblock %}
+    </main>
+    <!-- END Main Content -->
+
+    {% block footer %}
+      <!-- START Footer -->
+      <footer class="px-4 py-8 block">
+        <div class="mx-auto max-w-lg md:max-w-5xl text-sm">
+          {% block colophon %}
+            {% render "src/content/blocks/colophon.liquid" %}
+          {% endblock %}
+          {% block contact %}
+            {% render "src/content/blocks/contact.liquid" %}
+          {% endblock %}
+        </div>
+      </footer>
+      <!-- END Footer -->
+    {% endblock %}
+  </body>
+</html>

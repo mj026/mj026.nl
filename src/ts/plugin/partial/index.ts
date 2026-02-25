@@ -19,7 +19,6 @@ export default function vitePluginPartial(renderEngines: TRenderEngines = {}): P
       async handler(html: string): Promise<IndexHtmlTransformResult> {
         for (const match of templateHTMLMatcher(html)) {
           const { template, engine, path, json, content } = match;
-
           if (engine in engines) {
             const renderer = new renderEngines[engine]({
               template: await readFile(config.root, path, content),

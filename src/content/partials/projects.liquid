@@ -1,0 +1,34 @@
+<div class="grid grid-cols-1 md:grid-cols-2 pt-8">
+  <ul>
+    {% for project in projects limit:8 %}
+    <li>
+      <h4 class="text-md font-semibold">{{ project.year }}</h4>
+      <h5 class="font-semibold">{{ project.title }} </h5>
+      <p class="text-sm">{{ project.description }}</p>
+      <p class="text-md text-gray-700">
+        {% for tag in project.tags %}
+        <span class="badge">
+          <a href="{{ tag.url }}">{{ tag.title }}</a>
+        </span>
+        {% endfor %}
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+  <ul>
+    {% for project in projects offset:8 %}
+    <li>
+      <h4 class="text-md font-semibold">{{ project.year }}</h4>
+      <h5 class="font-semibold">{{ project.title }} </h5>
+      <p class="text-sm">{{ project.description }}</p>
+      <p class="text-md text-gray-700">
+        {% for tag in project.tags %}
+        <span class="badge">
+          <a href="{{ tag.url }}">{{ tag.title }}</a>
+        </span>
+        {% endfor %}
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

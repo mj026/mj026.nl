@@ -16,8 +16,16 @@
   src: url("../fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
+@font-face {
+  font-display: block;
+  font-family: "Lilex";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Lilex-Medium.woff2") format("woff2");
+}
+
 @theme {
-  --font-sans: "Work Sans", sans-serif;
+  --font-sans: "Lilex", sans-serif;
   --color-mj-blue: #356baf;
   --color-mj-blue-secondary: #517db8;
   --color-mj-blue-light: #f6f7fb;
@@ -26,7 +34,16 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+@utility header {
+  @apply py-2;
+}
+
 @layer base {
+  h1 {
+    font-family: "Work Sans", "Lilex", sans-serif;
+    @apply font-medium;
+  }
+
   a {
     @apply text-mj-blue underline;
   }
@@ -35,62 +52,144 @@
     @apply text-mj-orange underline;
   }
 
+  :root[data-theme="dark"] {
+    --color-mj-blue: var(--color-blue-300);
+  }
+}
+
+@layer components {
+  .btn-dark-mode {
+    @apply text-white;
+    svg.light {
+      display: none;
+    }
+
+    @variant dark {
+      svg.dark {
+        display: none;
+      }
+      svg.light {
+        display: block;
+      }
+    }
+  }
+
+  .work-sans {
+    font-family: "Work Sans", sans-serif;
+  }
+
+  .lilex {
+    font-family: "Lilex", sans-serif;
+  }
+
   .block {
     @apply rounded-xl bg-mj-blue-light p-8 md:p-16;
     h2 {
       @apply text-4xl;
     }
+    @variant dark {
+      @apply bg-zinc-800;
+    }
+  }
+
+  .blog {
+    @apply rounded-xl bg-mj-blue-light p-8 md:p-16;
+    @variant dark {
+      @apply bg-zinc-800;
+    }
+
+    h1 {
+      font-size: var(--text-4xl);
+      @apply header pb-0;
+    }
+
+    h2 {
+      font-size: var(--text-3xl);
+      @apply header pt-4;
+    }
+
+    h3 {
+      font-size: var(--text-2xl);
+      @apply header pt-4;
+    }
+
+    h4 {
+      font-size: var(--text-2xl);
+      @apply header;
+    }
+
+    h5 {
+      font-size: var(--text-xl);
+      @apply header;
+    }
+
+    img {
+      @apply drop-shadow-lg;
+    }
+
+    p,
+    img,
+    code,
+    pre,
+    ul {
+      @apply pb-4;
+    }
+
+    ul {
+      @apply list-disc ps-5;
+      li {
+        @apply py-1;
+        img {
+          @apply py-1;
+        }
+      }
+    }
+
+    code {
+      @apply bg-zinc-500/5 text-red-400 p-1;
+      border-radius: 0.5em;
+    }
+
+    blockquote {
+      @apply p-8 m-4 border-s-4 bg-mj-blue/5;
+    }
   }
 
   .badge {
     @apply inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10;
+
+    @variant dark {
+      @apply bg-zinc-700 text-zinc-200;
+    }
   }
 
   .about p {
     @apply mt-5;
   }
 
-  .projects {
+  .projects,
+  .blog-overview {
     ul {
       @apply ms-5 relative before:absolute before:top-0 before:bottom-0 before:-left-4 before:block before:w-1 before:rounded-full before:bg-mj-blue/10 before:content-[''];
       li {
-        @apply relative before:absolute before:top-[2.20rem] before:-left-[1.3rem] before:block before:size-4 before:rounded-full before:border-1 before:border-2 before:border-mj-blue/75 before:bg-white before:content-[''] ps-2 pb-3;
+        @apply relative before:absolute before:top-[2.20rem] before:-left-[1.3rem] before:block before:size-4 before:rounded-full before:border-1 before:border-2 before:border-mj-blue/75 before:bg-white before:content-[''] ps-2 pb-5;
         h4 {
           @apply text-mj-blue;
         }
       }
     }
-  }
-
-  :root[data-theme="light"] {
-    .btn-dark-mode {
-      @apply text-white;
-      svg.light {
-        display: none;
+    @variant dark {
+      .projects {
+        ul {
+          @apply before:bg-zinc-500/10;
+        }
       }
     }
   }
-
-  :root[data-theme="dark"] {
-    --color-mj-blue: var(--color-blue-300);
-
-    .block {
-      @apply bg-zinc-800;
-    }
-
-    .badge {
-      @apply bg-zinc-700 text-zinc-200;
-    }
-
-    .projects {
-      ul {
-        @apply before:bg-zinc-500/10;
-      }
-    }
-
-    .btn-dark-mode {
-      svg.dark {
-        display: none;
+  .blog-overview {
+    ul {
+      li {
+        @apply py-6;
       }
     }
   }

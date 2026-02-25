@@ -13,8 +13,6 @@ converter.setOption("openLinksInNewWindow", true);
 
 export class ShowdownRenderer extends AbstractPartialRenderer {
   async render() {
-    return new Promise<string>((resolve) =>
-      resolve(converter.makeHtml(this.config.template.trim())),
-    );
+    return converter.makeHtml(this.config.template.trim());
   }
 }

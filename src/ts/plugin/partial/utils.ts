@@ -24,7 +24,7 @@ export async function readFile<T extends string | object>(
 // Match templates like
 // <template
 //   data-template-engine="showdown"
-//   data-template-path="templates/about.md"></template>
+//   data-template-path="partials/about.md"></template>
 const regex =
   /(?<template><template(?:\n|\s)+data-template-engine="(?<engine>[^"]+)"(?:(?:\n|\s)+data-template-path="(?<path>[^"]+)")*(?:(?:\n|\s)+data-template-json="(?<json>[^"]+)")*>(?<content>[^<]*)<\/template>)/gs;
 
