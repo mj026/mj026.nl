@@ -93,14 +93,14 @@
   }
 
   .blog {
-    @apply rounded-xl bg-mj-blue-light p-4 md:p-8 md:p-16;
+    @apply rounded-xl bg-mj-blue-light p-4 md:p-8 md:p-16 wrap-anywhere text-pretty;
     @variant dark {
       @apply bg-zinc-800;
     }
 
     h1 {
       font-size: var(--text-4xl);
-      @apply header pb-0;
+      @apply header pb-0 leading-12;
     }
 
     h2 {
