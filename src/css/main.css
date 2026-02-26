@@ -131,8 +131,9 @@
     img,
     code,
     pre,
-    ul {
-      @apply pb-4;
+    ul,
+    table {
+      @apply mb-4;
     }
 
     ul {
@@ -145,12 +146,34 @@
       }
     }
 
+    pre {
+      overflow: auto;
+    }
+
+    table {
+      @apply text-sm block min-w-[100%];
+      display: block;
+      width: 0px;
+      overflow-x: auto;
+      th,
+      td {
+        @apply font-light text-left text-nowrap p-3 border-b-1 border-zinc-800/10 dark:border-zinc-100/10;
+      }
+      th {
+        @apply font-extrabold border-b-2 border-zinc-800/20 dark:border-zinc-100/10;
+
+      }
+      strong {
+        @apply font-black;
+      }
+    }
+
     code {
-      @apply bg-zinc-500/5 text-red-400 p-1;
+      @apply bg-zinc-500/5 text-red-400 p-1 text-base;
       border-radius: 0.5em;
       min-width: 100%;
       width: 0px;
-      overflow: auto; /* Or scroll */      
+      overflow: auto; /* Or scroll */
     }
 
     blockquote {
@@ -175,7 +198,7 @@
     ul {
       @apply ms-5 relative before:absolute before:top-0 before:bottom-0 before:-left-4 before:block before:w-1 before:rounded-full before:bg-mj-blue/10 before:content-[''];
       li {
-        @apply relative before:absolute before:top-[2.20rem] before:-left-[1.3rem] before:block before:size-4 before:rounded-full before:border-1 before:border-2 before:border-mj-blue/75 before:bg-white before:content-[''] ps-2 pb-5;
+        @apply relative before:absolute before:top-[1.98rem] before:-left-[1.3rem] before:block before:size-4 before:rounded-full before:border-1 before:border-2 before:border-mj-blue/75 before:bg-white before:content-[''] ps-2 pb-5;
         h4 {
           @apply text-mj-blue;
         }
