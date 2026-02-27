@@ -20,8 +20,16 @@
   font-display: block;
   font-family: "Lilex";
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   src: url("../fonts/Lilex-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Lilex";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Lilex-Bold.woff2") format("woff2");
 }
 
 @theme {
@@ -35,7 +43,7 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @utility header {
-  @apply py-2;
+  @apply pb-2;
 }
 
 @layer base {
@@ -83,24 +91,17 @@
   }
 
   .block {
-    @apply rounded-xl bg-mj-blue-light p-8 md:p-16;
+    @apply rounded-xl bg-mj-blue-light p-8 md:p-16 dark:bg-zinc-800;
     h2 {
       @apply text-4xl;
-    }
-    @variant dark {
-      @apply bg-zinc-800;
     }
   }
 
   .blog {
-    @apply rounded-xl bg-mj-blue-light p-4 md:p-8 md:p-16 wrap-anywhere text-pretty;
-    @variant dark {
-      @apply bg-zinc-800;
-    }
+    @apply rounded-xl bg-mj-blue-light p-4 md:p-8 md:p-16 wrap-anywhere text-pretty dark:bg-zinc-800;
 
     h1 {
-      font-size: var(--text-4xl);
-      @apply header pb-0 leading-12;
+      @apply header font-bold text-3xl;
     }
 
     h2 {
@@ -164,7 +165,7 @@
 
       }
       strong {
-        @apply font-black;
+        @apply font-bold;
       }
     }
 
@@ -182,11 +183,7 @@
   }
 
   .badge {
-    @apply inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10;
-
-    @variant dark {
-      @apply bg-zinc-700 text-zinc-200;
-    }
+    @apply inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-600 inset-ring inset-ring-gray-500/10 dark:bg-zinc-700 dark:text-zinc-200;
   }
 
   .about p {
