@@ -17,14 +17,15 @@
 
   <body
     class="antialiased flex flex-col h-screen text-lg text-gray-600 dark:text-zinc-200 dark:bg-zinc-900">
+    {% block header %}
     <!-- Header -->
     <header
-      class="relative sticky top-0 z-20 backdrop-blur drop-shadow-lg px-4 bg-mj-blue/90 dark:bg-zinc-900">
+      class="relative sticky top-0 z-20 backdrop-blur drop-shadow-lg px-4 bg-mj-blue/90 dark:bg-zinc-900 print:hidden">
       <div class="mx-auto max-w-5xl px-4 h-16 flex items-center justify-between">
         <a href="/" title="mj026">
           <figure>
              <svg aria-label="026" role="img" width="125" height="125" viewBox="0 0 2194 651" xmlns="http://www.w3.org/2000/svg">
-              <g id="MJ026-Shape-copy">
+              <g id="MJ026-Shape">
                 <filter id="filter1" x="0" y="0" width="2194" height="651" filterUnits="userSpaceOnUse"
                   primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feGaussianBlur stdDeviation="0" />
@@ -59,7 +60,7 @@
           <!-- Dark mode -->
           <button
             type="button"
-            class="btn-dark-mode flex shrink-0 justify-center items-center gap-x-1 text-xs hover:text-mj-orange ">
+            class="btn-dark-mode flex shrink-0 justify-center items-center gap-x-1 text-xs hover:text-mj-orange">
             <svg
               class="shrink-0 size-6 dark"
               xmlns="http://www.w3.org/2000/svg"
@@ -105,9 +106,10 @@
       </div>
     </header>
     <!-- END Header -->
+    {% endblock %}
 
     <!-- Main Content -->
-    <main class="mx-auto flex max-w-lg md:max-w-5xl lg:min-w-5xl flex-auto flex-col px-4 py-4">
+    <main class="mx-auto flex max-w-lg md:max-w-5xl lg:min-w-5xl print:max-w-[80%] flex-auto flex-col px-4 py-4">
     	{% block content %}{% endblock %}
       {% block after-content %}{% endblock %}
     </main>

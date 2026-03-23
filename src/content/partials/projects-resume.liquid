@@ -1,0 +1,28 @@
+<div class="row row2 mt-12 break-before-page">
+  <div><h2>Werkervaring</h2></div>
+</div>
+
+{% for project in projects %}
+	<div class="row row2 mb-8">
+		<div>Periode</div>
+		<div class="italic">{{ project.year }}</div>
+		<div>Bedrijf</div>
+		<div>{{ project.company }}</div>
+		{% if project.description != "" %}
+			<div>Project</div>
+			<div>{{ project.description }}</div>
+		{% endif %}
+		<div>Functie</div>
+		<div>{{ project.job_description_nl }}</div>
+		<div>Omschrijving</div>
+		<div>{{ project.description_nl }}</div>
+		<div>Technologie</div>
+		<div>        
+			{% for tag in project.tags %}
+        <span class="badge">
+          <a href="{{ tag.url }}">{{ tag.title }}</a>
+        </span>
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}

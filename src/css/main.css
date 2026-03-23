@@ -46,6 +46,14 @@
   @apply pb-2;
 }
 
+@utility lilex {
+  font-family: "Lilex", sans-serif;
+}
+
+@utility work-sans {
+  font-family: "Work Sans", sans-serif;
+}
+
 @layer base {
   h1 {
     font-family: "Work Sans", "Lilex", sans-serif;
@@ -67,7 +75,7 @@
 
 @layer components {
   .btn-dark-mode {
-    @apply text-white;
+    @apply text-white cursor-pointer;
     svg.light {
       display: none;
     }
@@ -87,7 +95,7 @@
   }
 
   .lilex {
-    font-family: "Lilex", sans-serif;
+    @apply lilex;
   }
 
   .block {
@@ -162,7 +170,6 @@
       }
       th {
         @apply font-extrabold border-b-2 border-zinc-800/20 dark:border-zinc-100/10;
-
       }
       strong {
         @apply font-bold;
@@ -215,5 +222,33 @@
         @apply py-6;
       }
     }
+  }
+
+  .resume {
+    @apply text-zinc-600 dark:text-zinc-200 text-[1rem] lilex leading-[1.75rem];
+
+    .row {
+      @apply grid grid-cols-1 gap-x-6;
+      div:nth-child(odd) {
+        @apply text-zinc-500 dark:text-zinc-400 text-left uppercase md:text-right print:text-right;
+        h2 {
+          @apply work-sans mb-2 text-[1.35rem] font-semibold;
+        }
+      }
+    }
+
+    .row2 {
+      @apply md:grid-cols-[40%_60%] print:grid-cols-[25%_75%];
+    }
+
+    .badge {
+      @apply text-[0.85rem];
+    }
+  }
+}
+
+@media print {
+  html {
+    font-size: 12px;
   }
 }
