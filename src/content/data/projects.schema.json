@@ -9,10 +9,16 @@
           "year": {
             "type": "string"
           },
-          "title": {
+          "company": {
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "description_nl": {
+            "type": "string"
+          },
+          "job_description_nl": {
             "type": "string"
           },
           "tags": {
@@ -32,7 +38,7 @@
             }
           }
         },
-        "required": ["year", "title", "description", "tags"]
+        "required": ["year", "company", "description", "description_nl", "job_description_nl", "tags"]
       }
     }
   },

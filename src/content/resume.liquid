@@ -1,0 +1,131 @@
+{% layout "src/content/layout/resume.liquid" %}
+{% block content %}
+<div class="resume">
+  <div class="row row2">
+    <div class="flex flex-col md:items-end print:items-end">
+      <img src="images/martijn.jpg" alt="Martijn Jacobs" class="shadow-lg w-[130px]">
+    </div>
+    <div class="flex flex-col justify-end mt-4">
+      <h1 class="text-[1.45rem] text-zinc-500 lilex">curriculum vitae</h1>
+      <h2 class="text-[2rem] work-sans">martijn jacobs</h2>
+    </div>
+  </div>
+  <div class="row row2 mt-12">
+    <div><h2>Personalia</h2></div>
+  </div>
+  <div class="row row2">
+    <div>Naam</div>
+    <div>Martijn Jacobs</div>
+    <div>Woonplaats</div>
+    <div>Velp (Gelderland)</div>
+    <div>E-mail</div>
+    <div>martijn@mj026.nl</div>
+    <div>Website</div>
+    <div><a href="https://www.mj026.nl">www.mj026.nl</a></div>
+    <div>Linkedin</div>
+    <div><a href="https://linkedin.com/in/mj026">linkedin.com/in/mj026</a></div>
+    <div>Nationaliteit</div>
+    <div>Nederlands</div>
+    <div>Rijbewijs</div>
+    <div>Ja</div>
+  </div>
+  <div class="row row2 mt-4">
+    <div>Huidige functie</div>
+    <div>(Python) web developer en consultant (ZZP)</div>
+  </div>
+  <div class="row row2 mt-4">
+    <div>Profiel</div>
+    <div>
+      <template
+        data-template-engine="showdown"
+        data-template-path="content/partials/profile.md"></template>
+    </div>
+  </div>
+  <template
+    data-template-engine="liquidjs"
+    data-template-path="content/partials/projects-resume.liquid"
+    data-template-json="content/data/projects.json"></template>
+  <div class="row row2 mt-12 break-before-page">
+    <div>
+      <h2 class="text-xl mb-2">Opleiding</h2>
+    </div>
+  </div>
+  <div class="row row2">
+    <div>Periode</div>
+    <div class="italic">1996 - 2002</div>
+    <div>Omschrijving</div>
+    <div>
+      Bachelor Hogere Informatica, <br>Hogeschool van Arnhem en Nijmegen, Arnhem
+    </div>
+  </div>
+  <div class="row row2 mt-8">
+    <div>Periode</div>
+    <div class="italic">1991 - 1996</div>
+    <div>Omschrijving</div>
+    <div>HAVO, Hendrik Pierson College, Zetten</div>
+  </div>
+  <div class="row row2 mt-12">
+    <div>
+      <h2>Vaardigheden</h2>
+    </div>
+  </div>
+  <div class="row row2">
+    <div>Talen</div>
+    <div>
+      Nederlands en Engels<br>
+      Ik versta en spreek Basis Duits.
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Programmeertalen <br>(vloeiend)</div>
+    <div>
+      Python, JavaScript (TS), Shell scripting (Bash)<br>
+      +20 jaar ervaring
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Programmeertalen <br>(overig)</div>
+    <div>
+      Ik lees (en schrijf) soms: Java, C, C++, C#, (Visual) Basic, PHP, Perl, Rust, Go
+      en meer.
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Frameworks</div>
+    <div>
+      Django, Django Rest Framework, Django Oscar, Wagtail, Flask, Vue.js, Zope, Plone
+      en meer.
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Methoden en technieken</div>
+    <div>
+      Scrum (Agile), Test Driven Development, functioneel programmeren, OOP, async
+      development en meer.
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Ervaring met</div>
+    <div>
+      Diverse API koppelingen, de meeste RDBMS systemen (SQL), met name PostgreSQL. Git
+      (SCM), JIRA, Github Actions, Gitlab CI, Docker, Terraform, AWS, Saltstack,
+      Ansible, Python packaging + deployment en meer.
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Web technologie</div>
+    <div>
+      De meeste gestandaardiseerde protocollen en markup languages zoals HTTP, HTML,
+      Sass/(S)CSS, XML, JSON, SOAP, REST, GraphQL, Jinja(2), Markdown, RST, TOML, YAML
+      en meer.
+    </div>
+  </div>
+  <div class="row row2 mt-6">
+    <div>Operating Systems</div>
+    <div>
+      MacOS / Ubuntu linux (lokaal development)<br>Debian / Alpine linux (cloud /
+      docker)
+    </div>
+  </div>
+</div>
+{% endblock %}
