@@ -4,7 +4,8 @@
     {
       "year": "2025",
       "company": "Beep for Help",
-      "description": "Customer Support Portal",
+      "title": "Customer Support Portal",
+      "title_nl": "Customer Support Portal",
       "description_nl": "Ontwikkeling van een klantenservice portaal met Django, op basis van een platform agnostische API.",
       "job_description_nl": "Python developer, systeem architect",
       "tags": [
@@ -33,7 +34,8 @@
     {
       "year": "2024",
       "company": "Track32",
-      "description": "Machine Learning Portal",
+      "title": "Machine Learning Portal",
+      "title_nl": "Machine Learning Portal",
       "description_nl": "Ontwikkeling van een Machine Learning portal applicatie en gekoppelde REST API om klantspecifieke model training te faciliteren. Inclusief koppelingen met storage (AWS S3/Minio), OpenAPI specificaties en Docker deployment.",
       "job_description_nl": "Python developer, consultant, DevOps engineer",
       "tags": [
@@ -70,7 +72,8 @@
     {
       "year": "2023",
       "company": "Techonomy",
-      "description": "Devops / CI / CD / Mentor",
+      "title": "Devops / CI / CD / Mentor",
+      "title_nl": "Devops / CI / CD / Mentor",
       "description_nl": "Opzetten van herbruikbare CI/CD pipelines + infrastructuur.",
       "job_description_nl": "Developer, agile coach, DevOps engineer, TDD CI mentor",
       "tags": [
@@ -91,7 +94,8 @@
     {
       "year": "2022",
       "company": "Team Sportservice",
-      "description": "Back Office Scheduler",
+      "title": "Back Office Scheduler",
+      "title_nl": "Back Office planning applicatie",
       "description_nl": "Ontwikkelen van een volledige Back office planning applicatie",
       "job_description_nl": "Python developer, DevOps engineer",
       "tags": [
@@ -116,7 +120,8 @@
     {
       "year": "2021",
       "company": "Vicktor",
-      "description": "Wagtail / Django Development",
+      "title": "Wagtail / Django Development",
+      "title_nl": "Wagtail / Django Development",
       "description_nl": "Ontwikkelen van diverse Wagtail en Django applicaties.",
       "job_description_nl": "Python + Front-end developer",
       "tags": [
@@ -145,7 +150,8 @@
     {
       "year": "2020",
       "company": "Gelders",
-      "description": "B2B E-commerce",
+      "title": "B2B E-commerce",
+      "title_nl": "B2B E-commerce",
       "description_nl": "Maatwerk E-commerce systeem, uitgerold op een Microsoft Azure Cloud omgeving met MS SQL Server.",
       "job_description_nl": "Python developer, systeem architect",
       "tags": [
@@ -170,7 +176,8 @@
     {
       "year": "2019",
       "company": "Zumtobel",
-      "description": "Corporate website",
+      "title": "Corporate website",
+      "title_nl": "Corporate website",
       "description_nl": "Maatwerk CMS systeem gebaseerd op Wagtail.",
       "job_description_nl": "Python developer, Front-end developer, systeem architect",
       "tags": [
@@ -195,7 +202,8 @@
     {
       "year": "2019",
       "company": "Lukkien",
-      "description": "Django development",
+      "title": "Django development",
+      "title_nl": "Django development",
       "description_nl": "Ontwikkelen van diverse Wagtail en Django applicaties.",
       "job_description_nl": "Python developer, Front-end developer",
       "tags": [
@@ -212,7 +220,8 @@
     {
       "year": "2018",
       "company": "Rijkzwaan",
-      "description": "Cluster REST API",
+      "title": "HPC Cluster REST API",
+      "title_nl": "HPC Cluster REST API",
       "description_nl": "We ontsloten een HPC cluster met RabbitMQ en Django Rest Framework, gekoppeld met Microsoft ADFS.",
       "job_description_nl": "Python developer, systeem architect",
       "tags": [
@@ -245,7 +254,8 @@
     {
       "year": "2018",
       "company": "Liander (Lab Digital)",
-      "description": "Microservices REST API + Payment",
+      "title": "Microservices REST API + Payment",
+      "title_nl": "Microservices REST API + Payment",
       "description_nl": "Diverse microservices voor het managen van stroomaansluitingen + koppeling met IDeal.",
       "job_description_nl": "Python developer",
       "tags": [
@@ -270,7 +280,8 @@
     {
       "year": "2014-2017",
       "company": "Vadain",
-      "description": "Soap Webservice",
+      "title": "Soap Webservice",
+      "title_nl": "Soap Webservice",
       "description_nl": "Ontwikkelen van een 'white label' gordijnconfigurator webservice, gebruikt door o.a. Gamma.",
       "job_description_nl": "Python developer",
       "tags": [
@@ -293,13 +304,14 @@
         {
           "url": "https://github.com/saltstack/salt",
           "title": "Saltstack"
-        }        
+        }
       ]
     },
     {
       "year": "2014-2017",
       "company": "Lukkien",
-      "description": "E-Commerce platform",
+      "title": "E-Commerce platform",
+      "title_nl": "Soap Webservice",
       "description_nl": "Diverse E-Commerce toepassingen voor Nutricia met een door ons ontwikkelde open source REST API genaamd Django Oscar API.",
       "job_description_nl": "Python developer",
       "tags": [
@@ -328,7 +340,8 @@
     {
       "year": "2015",
       "company": "Efteling",
-      "description": "E-Commerce Platform",
+      "title": "E-Commerce Platform",
+      "title_nl": "E-Commerce Platform",
       "description_nl": "Diverse E-Commerce toepassingen voor de Efteling met een door ons ontwikkelde open source REST API genaamd Django Oscar API.",
       "job_description_nl": "Python developer",
       "tags": [
@@ -349,7 +362,8 @@
     {
       "year": "2012-2014",
       "company": "Avira",
-      "description": "Safesearch High Performance Web Server",
+      "title": "Safesearch High Performance Application Server",
+      "title_nl": "Safesearch High Performance Application Server",
       "description_nl": "Ontwikkelen van een pluggable high performance web framework voor diverse Avira toepassingen.",
       "job_description_nl": "Python developer",
       "tags": [
@@ -370,9 +384,10 @@
     {
       "year": "2005-2011",
       "company": "Four Digits",
-      "description": "Founder / Python developer",
-      "description_nl": "Als één van de vier oprichters (Four Digits) ben ik vooral werkzaam geweest als Python developer en DevOps. Four Digits ontwikkelt allerlei webapplicaties met Python.",
-      "job_description_nl": "Python developer",
+      "title": "Founder, owner, Python developer",
+      "title_nl": "",
+      "description_nl": "Als één van de vier oprichters (Four Digits) ben ik vooral werkzaam geweest als Python developer en DevOps. Four Digits ontwikkelt webapplicaties voor uiteenlopende projecten met Python.",
+      "job_description_nl": "Oprichter, eigenaar en Python developer",
       "tags": [
         {
           "url": "https://github.com/zopefoundation/Zope",
@@ -395,8 +410,9 @@
     {
       "year": "2002-2005",
       "company": "East Site",
-      "description": "Coherence 2 CMS",
-      "description_nl": "Ontwikkelen van Coherence 2, een custom CMS systeem gebouwd met de Zope Application Server. Gebruikt door o.a. Radboud Universiteit, Gemeente Arnhem, Vitens, etc.",
+      "title": "Coherence 2 CMS",
+      "title_nl": "Coherence 2 CMS",
+      "description_nl": "Ontwikkelen van Coherence 2, een custom CMS systeem gebouwd met de Zope Application Server. Gebruikt door o.a. Radboud Universiteit, Gemeente Arnhem, en Vitens.",
       "job_description_nl": "Python developer",
       "tags": [
         {

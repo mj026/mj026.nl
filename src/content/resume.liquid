@@ -1,4 +1,4 @@
-{% layout "src/content/layout/resume.liquid" %}
+{% layout "src/content/layout/resume.liquid" %} 
 {% block content %}
 <div class="resume">
   <div class="row row2">
@@ -19,7 +19,17 @@
     <div>Woonplaats</div>
     <div>Velp (Gelderland)</div>
     <div>E-mail</div>
-    <div>martijn@mj026.nl</div>
+    <div>
+      martijn@mj026.nl
+      <button
+        type="button"
+        title="Kopier e-mail adres naar clipboard"
+        data-clipboard="martijn@mj026.nl"
+        data-success-message="Gekopieërd naar het clipboard!"
+        class="btn btn-clipboard">
+        {% include "src/content/includes/copy-svg.html" %}
+      </button>
+    </div>
     <div>Website</div>
     <div><a href="https://www.mj026.nl">www.mj026.nl</a></div>
     <div>Linkedin</div>
@@ -38,12 +48,12 @@
     <div>
       <template
         data-template-engine="showdown"
-        data-template-path="content/partials/profile.md"></template>
+        data-template-path="content/blocks/profile-nl.md"></template>
     </div>
   </div>
   <template
     data-template-engine="liquidjs"
-    data-template-path="content/partials/projects-resume.liquid"
+    data-template-path="content/blocks/projects-resume.liquid"
     data-template-json="content/data/projects.json"></template>
   <div class="row row2 mt-12 break-before-page">
     <div>
@@ -73,7 +83,7 @@
     <div>Talen</div>
     <div>
       Nederlands en Engels<br>
-      Ik versta en spreek Basis Duits.
+      Ik versta en spreek basis Duits.
     </div>
   </div>
   <div class="row row2 mt-6">
@@ -107,17 +117,17 @@
   <div class="row row2 mt-6">
     <div>Ervaring met</div>
     <div>
-      Diverse API koppelingen, de meeste RDBMS systemen (SQL), met name PostgreSQL. Git
-      (SCM), JIRA, Github Actions, Gitlab CI, Docker, Terraform, AWS, Saltstack,
-      Ansible, Python packaging + deployment en meer.
+      De meeste RDBMS systemen (SQL), met name PostgreSQL. Git (SCM), JIRA, Github
+      Actions, Gitlab CI, Docker, Terraform, AWS, Saltstack, Ansible, Python packaging +
+      deployment en meer.
     </div>
   </div>
   <div class="row row2 mt-6">
     <div>Web technologie</div>
     <div>
-      De meeste gestandaardiseerde protocollen en markup languages zoals HTTP, HTML,
-      Sass/(S)CSS, XML, JSON, SOAP, REST, GraphQL, Jinja(2), Markdown, RST, TOML, YAML
-      en meer.
+      De meeste gestandaardiseerde protocollen en markup languages zoals HTTP(S), HTML,
+      Sass/(S)CSS, XML, JSON, SOAP, REST, GraphQL, Jinja(2), Markdown, TOML, YAML en
+      meer.
     </div>
   </div>
   <div class="row row2 mt-6">

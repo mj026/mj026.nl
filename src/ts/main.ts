@@ -2,6 +2,7 @@ import hljs from "highlight.js/lib/core";
 import bash from "highlight.js/lib/languages/bash";
 import python from "highlight.js/lib/languages/python";
 import shell from "highlight.js/lib/languages/shell";
+import toast from "./toast.ts";
 
 hljs.registerLanguage("python", python);
 hljs.registerLanguage("bash", bash);
@@ -40,5 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  document.querySelectorAll<HTMLElement>(".btn-clipboard").forEach((button) => {
+    button.onclick = () => {
+      if (button.dataset.clipboard !== undefined) {
+        navigator.clipboard.writeText(button.dataset.clipboard || "");
+        if (button.dataset.successMessage !== undefined) {
+          toast(button.dataset.successMessage);
+        }
+      }
+    };
+  });
+
+  // Enable markdown syntax highlighting. 
+  // TODO: Render server side
   hljs.highlightAll();
 });
