@@ -1,4 +1,4 @@
-Hi, I'm Martijn, a software developer and consultant based in Arnhem, NL. I have 20+ years of (web) development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org).
+Hi, I'm Martijn, a software developer and consultant based in Arnhem, NL. I have 20+ years of (web) development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org)and web framework [Django](https://www.djangoproject.com/).
 
 I've worked on various projects for smaller and larger companies in many roles, such as (lead) developer, consultant, educator, mentor, code reviewer, researcher, and more. As one of the founders and owners of ([Four Digits](https://www.fourdigits.nl)) I've also gained business development and project management experience.
 
