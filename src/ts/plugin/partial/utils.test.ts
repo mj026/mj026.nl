@@ -19,11 +19,7 @@ test("Test the readFile method for json results", async () => {
     resolve(join(__dirname, "..", ".."), "partials/projects.json"),
     "utf-8",
   );
-  const result = await readFile(
-    resolve(join(__dirname, "..", "..")),
-    "partials/projects.json",
-    {},
-  );
+  const result = await readFile(resolve(join(__dirname, "..", "..")), "partials/projects.json", {});
   assert(
     JSON.stringify(result) === JSON.stringify(JSON.parse(expected)),
     "result should be the contents of projects.json as JSON",
@@ -32,11 +28,7 @@ test("Test the readFile method for json results", async () => {
 
 test("Test the readFile method for json results", async () => {
   const expected = { my: "json" };
-  const result = await readFile(
-    resolve(join(__dirname, "..", "..")),
-    undefined,
-    expected,
-  );
+  const result = await readFile(resolve(join(__dirname, "..", "..")), undefined, expected);
   assert(
     JSON.stringify(result) === JSON.stringify(expected),
     "result should be the contents of projects.json as JSON",

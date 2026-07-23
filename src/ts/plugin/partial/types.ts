@@ -21,8 +21,6 @@ export abstract class AbstractPartialRenderer implements IPartialRenderer {
 
 // We need a abstract construct signature here as abstract classes can't be initiated.
 // See https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-construct-signatures
-type AbstractPartialRendererConstructor = new (
-  config: TPartialConfig,
-) => AbstractPartialRenderer;
+type AbstractPartialRendererConstructor = new (config: TPartialConfig) => AbstractPartialRenderer;
 
 export type TRenderEngines = Record<string, AbstractPartialRendererConstructor>;

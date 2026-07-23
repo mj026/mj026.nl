@@ -24,20 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.dataset.theme = "light";
   }
 
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (event) => {
-      // Change to dark / light when the OS UI changes to dark / ligh
-      document.documentElement.dataset.theme = event.matches ? "dark" : "light";
-    });
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+    // Change to dark / light when the OS UI changes to dark / ligh
+    document.documentElement.dataset.theme = event.matches ? "dark" : "light";
+  });
 
   const toggleThemeButton = document.querySelector<HTMLElement>(".btn-dark-mode");
 
   if (toggleThemeButton !== null) {
     toggleThemeButton.onclick = () => {
       const currentTheme = document.documentElement.dataset.theme;
-      document.documentElement.dataset.theme =
-        currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = currentTheme === "dark" ? "light" : "dark";
     };
   }
 
@@ -52,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 
-  // Enable markdown syntax highlighting. 
+  // Enable markdown syntax highlighting.
   // TODO: Render server side
   hljs.highlightAll();
 });

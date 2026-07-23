@@ -1,4 +1,4 @@
-Ik ben 20+ jaar werkzaam als softwareontwikkelaar en consultant. Als zelfstandig ondernemer en oprichter van Four Digits in Arnhem heb ik ook de nodige projectmatige en zakelijke ervaring. 
+Ik ben 20+ jaar werkzaam als softwareontwikkelaar en consultant. Als zelfstandig ondernemer en oprichter van Four Digits in Arnhem heb ik ook de nodige projectmatige en zakelijke ervaring.
 
 <br>Ik stuur graag aan op kwaliteit, leesbare programmacode en de beste oplossingen voor de lange termijn. Ik ontwikkel bij voorkeur met Python en gebruik al jaren de applicatieserver Django. Ik gebruik ook graag web frontend tools zoals Vite en hou van simpele en doeltreffende UI's, geschreven met HTML, CSS en TypeScript.
 

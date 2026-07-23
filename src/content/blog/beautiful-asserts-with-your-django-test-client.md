@@ -1,12 +1,12 @@
 # Beautiful asserts with your Django Test Client
-*March 27, 2023*
+
+_March 27, 2023_
 
 ![Soup](/images/max-griss-unsplash-soup.jpg "Photo by Max Griss on Unsplash") When you write tests using the [Django Test Client](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#the-test-client) you often want to check for error messages being displayed correctly or if a page renders specific HTML elements. Although [assertHTMLEqual](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#django.test.SimpleTestCase.assertHTMLEqual) or [assertContains](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#django.test.SimpleTestCase.assertContains) with the `html` parameter are useful for this, it doesn't feel very elegant to write asserts with HTML markup. Could there be a more sophisticated way?
 
-
 ### Minimal example
 
-Let's first demonstrate how you would test a simple Django form and view with a *unit test* and a *functional/integration* test. I will use the term *functional test* from now on, as I use the Django Test Client mainly for testing *functionality* from a user's perspective.
+Let's first demonstrate how you would test a simple Django form and view with a _unit test_ and a _functional/integration_ test. I will use the term _functional test_ from now on, as I use the Django Test Client mainly for testing _functionality_ from a user's perspective.
 
 We will use [pytest](https://docs.pytest.org/en/7.2.x/) with [pytest-django](https://github.com/pytest-dev/pytest-django) in this article, but the same principles apply if you use the default Django test runner.
 
@@ -14,15 +14,17 @@ Based on Adam Johnson's excellent [How to Unit Test a Django Form](https://adamj
 
 In any case, if you would like to see the full source code, including all the tests, or if you want to play around with the project, you can find it here: https://github.com/mj026/beautiful-asserts
 
-So, let's get started with the core of the tested application, a simple *model* and *form*:
+So, let's get started with the core of the tested application, a simple _model_ and _form_:
 
-*models.py*
+_models.py_
+
 ```python
 class Article(models.Model):
     title = models.CharField(max_length=255)
 ```
 
-*forms.py*
+_forms.py_
+
 ```python
 class ArticleForm(forms.ModelForm):
     class Meta:
@@ -43,7 +45,7 @@ class ArticleForm(forms.ModelForm):
 
 #### Unit tests
 
-First, we write a unit test for a *happy flow* scenario. When you enter a correct title, the form should be valid, and as a bonus, we could check if the form will create a new `Article` instance; it is a `ModelForm` after all:
+First, we write a unit test for a _happy flow_ scenario. When you enter a correct title, the form should be valid, and as a bonus, we could check if the form will create a new `Article` instance; it is a `ModelForm` after all:
 
 ```python
 @pytest.mark.django_db
@@ -92,6 +94,7 @@ Now we know that the form is tested thoroughly, and we want to make sure that th
 - Redirect to an overview page when all is fine
 
 let's first start to check if the form is rendered correctly. The test is exaggerated a bit here for demonstration purposes:
+
 ```python
 @pytest.mark.django_db
 def test_article_create__get__assertContains(client):
@@ -110,6 +113,7 @@ def test_article_create__get__assertContains(client):
 Reading this immediately causes some itch: typing all this HTML makes it messy, challenging to read, and fault-tolerant. When frontend developers add or change HTML attributes / CSS classes in the template or change the way this form is displayed, this test will fail. Then we need to update the HTML in this test each time we change something. Not very efficient nor convenient.
 
 To overcome this, you could write something like this:
+
 ```python
 @pytest.mark.django_db
 def test_article_create__get__assert_with_regex(client):
@@ -120,16 +124,15 @@ def test_article_create__get__assert_with_regex(client):
     assert re.search("<form.*>", str(response.content))
 ```
 
-But this makes things even more itchy, and using regular expressions for parsing HTML tags is far from ideal. Next to that, frontend changes like CSS classes are most of the time not relevant for these tests: we just want to know if the form renders properly and that it's very likely that it *functions* correctly.
+But this makes things even more itchy, and using regular expressions for parsing HTML tags is far from ideal. Next to that, frontend changes like CSS classes are most of the time not relevant for these tests: we just want to know if the form renders properly and that it's very likely that it _functions_ correctly.
 
 #### Alternatives
 
 This makes you wonder if there is an alternative that isn't itchy. For E2E tests, you could use [Playwright](https://github.com/microsoft/playwright-pytest), and then you can use the [document.querySelector API](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) with CSS selectors. What if you could do that in your Django tests with the Django Test Client?
 
-
 ### Soup Sieve
 
-Meet [Soup Sieve](https://github.com/facelessuser/soupsieve), an excellent selector add-on for [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/). It comes preinstalled with BeautifulSoup4 4.7.0 and above and uses the *CSS selector API* to query your document. A basic example:
+Meet [Soup Sieve](https://github.com/facelessuser/soupsieve), an excellent selector add-on for [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/). It comes preinstalled with BeautifulSoup4 4.7.0 and above and uses the _CSS selector API_ to query your document. A basic example:
 
 ```python
 >>> from bs4 import BeautifulSoup
@@ -139,6 +142,7 @@ Meet [Soup Sieve](https://github.com/facelessuser/soupsieve), an excellent selec
 ```
 
 To use this in our tests, you could simply write:
+
 ```python
 def test_article_create__get(client):
     response = client.get(reverse("article-create"))
@@ -198,6 +202,7 @@ def test_article_create__post_error__select(client):
 It became much easier now to query for specific elements, and we can even check easily how many error messages are shown. You could even check the specific error message if you'd like to.
 
 More examples:
+
 ```python
 # Check if the save button is present
 assert response.select("form .buttonHolder button[name=save]")
