@@ -1,4 +1,4 @@
-Hi, I'm Martijn, a software developer and consultant based in Arnhem, NL. I have 20+ years of (web) development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org)and web framework [Django](https://www.djangoproject.com/).
+Hi, I'm Martijn, a software developer and consultant based in Arnhem, NL. I have 20+ years of (web) development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org) and the web framework [Django](https://www.djangoproject.com/).
 
 I've worked on various projects for smaller and larger companies in many roles, such as (lead) developer, consultant, educator, mentor, code reviewer, researcher, and more. As one of the founders and owners of ([Four Digits](https://www.fourdigits.nl)) I've also gained business development and project management experience.
 
@@ -8,4 +8,4 @@ TDD, CI/CD and DevOps are things I like to implement and automate with tools suc
 
 I'm also familiar with front-end development, including HTML, JavaScript (TS), (S)CSS or frameworks like [TailwindCSS](https://tailwindcss.com/) and [Vue.js](https://vuejs.org/).
 
-Unix-based systems like Linux and macOS are my preferred OS's, and my current favourite container OS is [Alpine Linux](https://alpinelinux.org/)</a>. [Sublime Text](https://www.sublimetext.com/) is still my favourite editor.
+Unix-based systems like Linux and macOS are my preferred OS's, and my current favourite container OS is [Alpine Linux](https://alpinelinux.org/). [Sublime Text](https://www.sublimetext.com/) is still my go-to editor.
