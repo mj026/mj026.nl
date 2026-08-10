@@ -24,14 +24,14 @@ export default defineConfig({
   publicDir: "../../public",
   build: {
     target: "es2015",
-    outDir: "../dist",
+    outDir: "../../dist",
     emptyOutDir: true,
     // No preload stuff is needed as we want the bundle to be very small
     modulePreload: {
       polyfill: false
     },
     rollupOptions: {
-      input: glob.sync(resolve(__dirname, "src", "**/*.html"))
+      input: glob.sync(resolve(__dirname, "src", "site", "**/*.html"))
     }
   },
   test: {
