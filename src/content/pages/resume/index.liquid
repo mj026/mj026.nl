@@ -1,4 +1,4 @@
-{% layout "src/content/layout/resume.liquid" %} 
+{% layout "layout/resume.liquid" %} 
 {% block content %}
 <div class="resume">
   <div class="row row2">
@@ -27,7 +27,7 @@
         data-clipboard="martijn@mj026.nl"
         data-success-message="Gekopieërd naar het clipboard!"
         class="btn btn-clipboard">
-        {% include "src/content/includes/copy-svg.html" %}
+        {% include "includes/copy-svg.html" %}
       </button>
     </div>
     <div>Website</div>
@@ -48,13 +48,13 @@
     <div>
       <template
         data-template-engine="showdown"
-        data-template-path="content/blocks/profile-nl.md"></template>
+        data-template-path="pages/resume/blocks/profile.md"></template>
     </div>
   </div>
   <template
     data-template-engine="liquidjs"
-    data-template-path="content/blocks/projects-resume.liquid"
-    data-template-json="content/data/projects.json"></template>
+    data-template-path="pages/resume/blocks/projects.liquid"
+    data-template-json="data/projects.json"></template>
   <div class="row row2 mt-12 break-before-page">
     <div>
       <h2 class="text-xl mb-2">Opleiding</h2>
