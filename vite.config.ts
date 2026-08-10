@@ -1,25 +1,26 @@
 import tailwindcss from "@tailwindcss/vite";
-import type { UserConfig, PluginOption } from "vite";
+import type { UserConfig } from "vite";
 
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { glob } from "glob"
-import partial from "./src/ts/plugin/partial";
+import partial from "./src/plugin/partial";
 
-import { ShowdownRenderer, EtaRenderer, LiquidJSRenderer } from "./src/ts/plugin/partial/renderers";
-import liquidjs  from "./src/ts/plugin/liquidjs";
+import { ShowdownRenderer, EtaRenderer, LiquidJSRenderer } from "./src/plugin/partial/renderers";
+import liquidjs  from "./src/plugin/liquidjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+const contentRootDir = resolve(__dirname, "src/content")
 
 export default {
   plugins: [
-    liquidjs(),
-    partial({ liquidjs: LiquidJSRenderer }),
-    partial({ eta: EtaRenderer, showdown: ShowdownRenderer, liquidjs: LiquidJSRenderer }),
+    liquidjs(contentRootDir),
+    partial({ liquidjs: LiquidJSRenderer }, contentRootDir),
+    partial({ eta: EtaRenderer, showdown: ShowdownRenderer, liquidjs: LiquidJSRenderer }, contentRootDir),
     tailwindcss(),
   ],
-  root: "src",
-  publicDir: "../public",
+  root: "src/site",
+  publicDir: "../../public",
   build: {
     target: "es2015",
     outDir: "../dist",
