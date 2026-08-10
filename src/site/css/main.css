@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../../content";
 
 @font-face {
   font-display: block;
