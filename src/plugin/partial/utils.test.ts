@@ -16,10 +16,14 @@ test("Test the readFile method for the default result", async () => {
 
 test("Test the readFile method for json results", async () => {
   const expected = await promises.readFile(
-    resolve(join(__dirname, "..", ".."), "partials/projects.json"),
+    resolve(join(__dirname, "..", ".."), "content/data/projects.json"),
     "utf-8",
   );
-  const result = await readFile(resolve(join(__dirname, "..", "..")), "partials/projects.json", {});
+  const result = await readFile(
+    resolve(join(__dirname, "..", "..")),
+    "content/data//projects.json",
+    {},
+  );
   assert(
     JSON.stringify(result) === JSON.stringify(JSON.parse(expected)),
     "result should be the contents of projects.json as JSON",
