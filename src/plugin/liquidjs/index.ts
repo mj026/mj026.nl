@@ -8,7 +8,7 @@ export default function vitePluginLiquidJS(contentRootDir: string): Plugin {
     transformIndexHtml: {
       order: "pre",
       async handler(html: string): Promise<IndexHtmlTransformResult> {
-        const engine = new Liquid({root: contentRootDir});
+        const engine = new Liquid({ root: contentRootDir });
         return engine.parseAndRender(html, {});
       },
     },

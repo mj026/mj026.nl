@@ -3,7 +3,10 @@ import type { IndexHtmlTransformResult, Plugin } from "vite";
 import type { TRenderEngines } from "./types.ts";
 import { readFile, templateHTMLMatcher } from "./utils.ts";
 
-export default function vitePluginPartial(renderEngines: TRenderEngines = {}, contentRootDir: string): Plugin {
+export default function vitePluginPartial(
+  renderEngines: TRenderEngines = {},
+  contentRootDir: string,
+): Plugin {
   const engines: TRenderEngines = renderEngines;
 
   return {
