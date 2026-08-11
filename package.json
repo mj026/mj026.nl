@@ -10,7 +10,7 @@
     "preview": "vite preview --host 0.0.0.0",
     "lint": "oxlint src/",
     "format": "oxfmt src/",
-    "test": "vitest --printConsoleTrace=true --silent=false",
+    "test": "vitest run --printConsoleTrace=true --silent=false",
     "visualize": "vite-bundle-visualizer -c vite.config.js"
   },
   "dependencies": {
